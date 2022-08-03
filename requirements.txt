@@ -1,0 +1,3 @@
+seldon-core
+numpy
+gluonts[mxnet,pro]

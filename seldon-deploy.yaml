@@ -1,0 +1,23 @@
+apiVersion: machinelearning.seldon.io/v1alpha2
+kind: SeldonDeployment
+metadata:
+  name: my-model
+spec:
+  name: my-deployment
+  predictors:
+  - componentSpecs:
+    - spec:
+        containers:
+        - name: my-model-graph
+          image: jsilverstein/my-model:0.2
+    graph:
+      children: []
+      endpoint:
+        type: REST
+      name: my-model-graph
+      type: MODEL
+    annotations:
+      predictor_version: "0.2"
+      seldon.io/svc-name: my-model-svc    
+    name: my-graph
+    replicas: 1
