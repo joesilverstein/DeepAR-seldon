@@ -9,7 +9,7 @@ spec:
     - spec:
         containers:
         - name: my-model-graph
-          image: jsilverstein/my-model:0.2
+          image: jsilverstein/my-model:0.3
     graph:
       children: []
       endpoint:
@@ -17,7 +17,7 @@ spec:
       name: my-model-graph
       type: MODEL
     annotations:
-      predictor_version: "0.2"
+      predictor_version: "0.3"
       seldon.io/svc-name: my-model-svc    
     name: my-graph
     replicas: 1

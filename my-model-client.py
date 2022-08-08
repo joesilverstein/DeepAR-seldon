@@ -16,7 +16,10 @@ if __name__ == "__main__":
     url = sys.argv[1]
     # path = sys.argv[2]
 
-    dataset = get_dataset("airpassengers")
+    # dataset = get_dataset("airpassengers")
+    with open('test_ds.pkl', 'rb') as f:
+        dataset = pickle.load(f)
+    
     true_values = to_pandas(list(dataset.test)[0])
     json_dict = {}
     # time time series to predict
